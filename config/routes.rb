@@ -1,9 +1,14 @@
 SampleApp::Application.routes.draw do
-  get "pages/homes"
+  match '/contact', :to => 'pages#contact'
+  match '/about',   :to => 'pages#about'
+  match '/help',    :to => 'pages#help'
+  match '/homes',   :to => 'pages#homes'
+  root              :to => 'pages#homes'
 
-  get "pages/contact"
 
-  get "pages/about"
+#  get "pages/homes"
+#  get "pages/contact"
+#  get "pages/about"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
